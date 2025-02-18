@@ -1,0 +1,69 @@
+
+@use "../../styles/partials/mixins" as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include desktop {
+    width: 100%;
+    height: 100%; // Make sure the container takes full viewport height
+  }
+}
+
+.filter-open {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%; // Ensure the section takes the full height of its parent
+  }
+}
+
+.filter-open .hero__photo {
+  @include desktop {
+    width: 70%; 
+    height: 100%; // Photo section will take the remaining height
+  }
+}
+
+.filter-open .tags-container {
+  display: none;
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    width: 30%; // Tags container takes up 30% width
+    height: auto;
+    margin-top: 0;
+  }
+}
+
+.content .filter-head {
+  @include desktop {
+    display: none;
+  }
+}
+
+.filter-open .filter-head {
+  display: flex;
+}
+
+.filter-open .tag-btn {
+  @include desktop {
+    height: 30px;
+    margin-right: 10px; // Space between tags
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.filter-open .all-tags{
+    padding: 16px;
+    @include desktop{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

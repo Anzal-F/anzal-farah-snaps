@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.scss";
 import tagsData from "./data/tags.json";
 import photosData from "./data/photos.json";
+import Content from "./components/Content/Content";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
@@ -38,6 +39,14 @@ function App() {
         handleFilterSelect={handleFilterSelect}
         isOpen={isOpen}   
         toggleNavbar={toggleNavbar} 
+      />
+
+      <Content
+        tags={tags}
+        selectedTag={selectedTag}
+        onFilterSelect={handleFilterSelect}
+        isOpen={isOpen}  
+        photos={filteredPhotos}
       />
     </main>
     </>
