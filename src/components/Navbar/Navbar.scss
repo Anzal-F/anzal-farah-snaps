@@ -1,0 +1,76 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.navbar {
+  background-color: #EFFAF7;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  transition: height 0.3s ease;
+  overflow: hidden;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.navbar-title {
+  text-decoration: none;
+  color: black;
+  @include mobile__wordMark;
+
+  @include tablet{
+    @include tablet__wordMark;
+  }
+}
+.filter-button.active .filter-icon path {
+  fill: #EFFAF7; 
+}
+
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.filter-button {
+  background-color: #EFFAF7;
+  display: flex;
+  color: #1E6655;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3px 10px;
+  border: 2px solid #1E6655;
+  cursor: pointer;
+  @include mobile__header;
+  width: 100px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+
+  @include desktop {
+    width: 120px;
+  }
+}
+
+.filter-button.active {
+  background-color: #1E6655;
+  color: #fff;
+}
+
+.tags-container {
+  @include desktop {
+    display: none;
+    width: 30%;
+    position: absolute;
+    top: 0px;
+  }
+}
+
+.navbar.expanded .tags-container {
+  
+  @include desktop{
+    display: none;
+  }
+}

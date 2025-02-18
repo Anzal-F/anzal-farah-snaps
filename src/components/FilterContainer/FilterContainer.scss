@@ -1,0 +1,87 @@
+
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.tags-container {
+  background-color: #E4EFEC;
+  opacity: 1;
+  max-height: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 0;
+    flex-direction: row;
+  }
+}
+
+.filter-head {
+  @include mobile__header;
+  padding: 16px;
+  display: none;
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.tags-container.show {
+  @include desktop {
+    position: relative;
+    z-index: 1;
+  }
+
+  & .filter-head{
+    display: flex;
+  }
+}
+
+.navbar.expanded .tags-container {
+  opacity: 1;
+
+  @include desktop {
+    width: 30%;
+    align-self: flex-end;
+    display: flex;
+  }
+}
+
+.tag-btn {
+  margin: 5px 5px;
+  color: #1E6655;
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: 1px solid #1E6655;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  @include mobile__bodyMedium;
+
+  @include desktop {
+    top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.tag-btn.active {
+  background-color: #1E6655;
+  color: white;
+}
+
+.tag-btn:hover{
+  background-color: #B7CEC9;
+}
+
+.tags {
+  margin: 20px;
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
