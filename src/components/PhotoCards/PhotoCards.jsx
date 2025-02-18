@@ -13,7 +13,6 @@ export default function PhotoCards({ photo }) {
                 </span>
             ))}
         </div>
-
     </div>
   );
 }

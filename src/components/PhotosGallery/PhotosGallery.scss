@@ -1,7 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .photos-grid {
-  flex-grow: 1; // Ensures it fills available space
+  flex-grow: 1; 
   width: 100%;
   gap: 20px;
   margin-top: 20px;
@@ -19,14 +19,6 @@
       grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
-
-// .navbar.expanded ~ .photos-grid {
-//   @include desktop {
-//     grid-template-columns: 1fr 1fr;
-//     width: 80%;
-//   }
-// }
 
 .filter-open .photos-grid{
   @include desktop{
