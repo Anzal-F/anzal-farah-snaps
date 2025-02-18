@@ -1,0 +1,23 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero__title{
+    @include mobile__bodyLight;
+    padding: 16px;
+    margin-top: -10px;
+}
+
+.hero__text{
+    @include mobile__title;
+    padding: 0 16px;
+    margin-bottom: 30px;
+    width: 100%;
+
+    @include desktop{
+        max-width: 500px;
+    }
+}
+
+span{
+    @include mobile__titleItalics;
+}
