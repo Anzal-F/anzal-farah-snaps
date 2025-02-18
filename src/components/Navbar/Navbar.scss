@@ -13,26 +13,27 @@
   @include desktop {
     flex-direction: row;
   }
-}
 
-.navbar-title {
-  text-decoration: none;
-  color: black;
-  @include mobile__wordMark;
+  &-title {
+    text-decoration: none;
+    color: black;
+    @include mobile__wordMark;
+  
+    @include tablet{
+      @include tablet__wordMark;
+    }
+  }
 
-  @include tablet{
-    @include tablet__wordMark;
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 }
+
 .filter-button.active .filter-icon path {
   fill: #EFFAF7; 
-}
-
-.navbar-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .filter-button {
@@ -52,12 +53,14 @@
   @include desktop {
     width: 120px;
   }
+
+  &.active {
+    background-color: #1E6655;
+    color: #fff;
+  }
 }
 
-.filter-button.active {
-  background-color: #1E6655;
-  color: #fff;
-}
+
 
 .tags-container {
   @include desktop {

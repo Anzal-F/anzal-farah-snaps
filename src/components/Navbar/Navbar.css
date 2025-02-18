@@ -42,7 +42,6 @@
     flex-direction: row;
   }
 }
-
 .navbar-title {
   text-decoration: none;
   color: black;
@@ -59,16 +58,15 @@
     font-weight: 400;
   }
 }
-
-.filter-button.active .filter-icon path {
-  fill: #EFFAF7;
-}
-
 .navbar-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+.filter-button.active .filter-icon path {
+  fill: #EFFAF7;
 }
 
 .filter-button {
@@ -93,7 +91,6 @@
     width: 120px;
   }
 }
-
 .filter-button.active {
   background-color: #1E6655;
   color: #fff;

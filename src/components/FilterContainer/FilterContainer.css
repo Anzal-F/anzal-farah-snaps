@@ -44,6 +44,15 @@
     flex-direction: row;
   }
 }
+@media (min-width: 1280px) {
+  .tags-container.show {
+    position: relative;
+    z-index: 1;
+  }
+}
+.tags-container.show .filter-head {
+  display: flex;
+}
 
 .filter-head {
   font-family: "Outfit";
@@ -60,16 +69,6 @@
   }
 }
 
-@media (min-width: 1280px) {
-  .tags-container.show {
-    position: relative;
-    z-index: 1;
-  }
-}
-.tags-container.show .filter-head {
-  display: flex;
-}
-
 .navbar.expanded .tags-container {
   opacity: 1;
 }
@@ -84,7 +83,7 @@
 .tag-btn {
   margin: 5px 5px;
   color: #1E6655;
-  padding: 5px 10px;
+  padding: 8px 12px;
   border-radius: 7px;
   border: 1px solid #1E6655;
   cursor: pointer;
@@ -102,12 +101,10 @@
     flex-wrap: wrap;
   }
 }
-
 .tag-btn.active {
   background-color: #1E6655;
   color: white;
 }
-
 .tag-btn:hover {
   background-color: #B7CEC9;
 }

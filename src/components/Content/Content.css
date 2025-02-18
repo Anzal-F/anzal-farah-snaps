@@ -9,6 +9,11 @@
     height: 100%;
   }
 }
+@media (min-width: 1280px) {
+  .content .filter-head {
+    display: none;
+  }
+}
 
 @media (min-width: 1280px) {
   .filter-open {
@@ -18,14 +23,12 @@
     height: 100%;
   }
 }
-
 @media (min-width: 1280px) {
   .filter-open .hero__photo {
     width: 70%;
     height: 100%;
   }
 }
-
 .filter-open .tags-container {
   display: none;
 }
@@ -40,17 +43,9 @@
     margin-top: 0;
   }
 }
-
-@media (min-width: 1280px) {
-  .content .filter-head {
-    display: none;
-  }
-}
-
 .filter-open .filter-head {
   display: flex;
 }
-
 @media (min-width: 1280px) {
   .filter-open .tag-btn {
     height: 30px;
@@ -59,7 +54,6 @@
     flex-direction: row;
   }
 }
-
 .filter-open .all-tags {
   padding: 16px;
 }

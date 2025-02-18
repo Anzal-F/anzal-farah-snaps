@@ -43,7 +43,6 @@
     width: 95%;
   }
 }
-
 .photo-card:hover {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }

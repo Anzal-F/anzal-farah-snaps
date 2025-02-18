@@ -10,6 +10,12 @@
     width: 100%;
     height: 100%; 
   }
+
+  & .filter-head {
+    @include desktop {
+      display: none;
+    }
+  }
 }
 
 .filter-open {
@@ -19,51 +25,47 @@
     justify-content: space-between;
     height: 100%; 
   }
-}
 
-.filter-open .hero__photo {
-  @include desktop {
-    width: 70%; 
-    height: 100%; 
-  }
-}
-
-.filter-open .tags-container {
-  display: none;
-  @include desktop {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-top: 20px;
-    width: 30%; 
-    height: auto;
-    margin-top: 0;
-  }
-}
-
-.content .filter-head {
-  @include desktop {
-    display: none;
-  }
-}
-
-.filter-open .filter-head {
-  display: flex;
-}
-
-.filter-open .tag-btn {
-  @include desktop {
-    height: 30px;
-    margin-right: 10px; 
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-.filter-open .all-tags{
-    padding: 16px;
-    @include desktop{
-        display: flex;
-        flex-wrap: wrap;
+  & .hero__photo {
+    @include desktop {
+      width: 70%; 
+      height: 100%; 
     }
+  }
+  
+  & .tags-container {
+    display: none;
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding-top: 20px;
+      width: 30%; 
+      height: auto;
+      margin-top: 0;
+    }
+  }
+
+  & .filter-head {
+    display: flex;
+  }
+  
+  & .tag-btn {
+    @include desktop {
+      height: 30px;
+      margin-right: 10px; 
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+  & .all-tags{
+      padding: 16px;
+      @include desktop{
+          display: flex;
+          flex-wrap: wrap;
+      }
+  }
 }
+
+
