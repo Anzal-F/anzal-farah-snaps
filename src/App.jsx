@@ -1,9 +1,11 @@
+
 import { useState, useEffect } from "react";
 import "./App.scss";
 import tagsData from "./data/tags.json";
 import photosData from "./data/photos.json";
 import Content from "./components/Content/Content";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [tags, setTags] = useState([]);
@@ -49,6 +51,9 @@ function App() {
         photos={filteredPhotos}
       />
     </main>
+    <div className="footer">
+      <Footer />
+    </div>
     </>
   );
 }

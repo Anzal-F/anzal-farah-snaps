@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-Light.woff2") format("woff2"), url("../../assets/fonts/Newsreader-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-LightItalic.woff2") format("woff2"), url("../../assets/fonts/Newsreader-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-Regular.woff2") format("woff2"), url("../../assets/fonts/Newsreader-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit-Light.woff2") format("woff2"), url("../../assets/fonts/Outfit-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit-Medium.woff2") format("woff2"), url("../../assets/fonts/Outfit-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@media (min-width: 1280px) {
+  .footer-main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+@media (min-width: 768px) {
+  .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .left {
+    width: 80%;
+  }
+}
+
+.wordmark-title {
+  text-decoration: none;
+  color: black;
+  font-family: "Newsreader";
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .wordmark-title {
+    font-family: "Newsreader";
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .links {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+  }
+}
+
+.link {
+  padding-bottom: 10px;
+  font-family: "Outfit";
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .link {
+    font-family: "Outfit";
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+  }
+}
+
+.right {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  .right {
+    margin-top: 100px;
+  }
+}
+@media (min-width: 1280px) {
+  .right {
+    margin-top: 0;
+    align-self: self-start;
+  }
+}
+
+.copyright {
+  display: flex;
+  gap: 0.9375rem;
+  margin-top: 30px;
+  font-family: "Outfit";
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+  color: #B7CEC9;
+}/*# sourceMappingURL=Footer.css.map */

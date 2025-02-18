@@ -13,3 +13,16 @@
     flex-direction: column;
 }
 
+.footer {
+    background-color: #EFFAF7;
+    font-family: "Newsreader", "Outfit", Arial, sans-serif;
+    height: 380px;
+    padding: 0 16px;
+    padding-top: 40px;
+    margin-top: auto; // Pushes the footer down when there isn't enough content
+
+    @include desktop {
+        height: 300px;
+        padding-top: 120px;
+    }
+}
