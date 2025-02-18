@@ -1,0 +1,111 @@
+@mixin tablet{
+    @media (min-width: 768px){
+        @content;
+    }
+}
+@mixin desktop{
+    @media (min-width: 1280px){
+        @content
+    }
+};
+
+@mixin mobile__wordMark{
+    font-family: "Newsreader";
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 400;
+}
+@mixin mobile__title{
+    font-family: "Newsreader";
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: 300;
+}
+@mixin mobile__titleItalics{
+    font-family: "Newsreader";
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: 300;
+    font-style: italic;
+}
+@mixin mobile__header{
+    font-family: "Outfit";
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 500;
+}
+@mixin mobile__bodyMedium{
+    font-family: "Outfit";
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+}
+@mixin mobile__bodyLight{
+    font-family: "Outfit";
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 300;
+}
+@mixin mobile__smallBody{
+    font-family: "Outfit";
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+}
+@mixin mobile__label{
+    font-family: "Outfit";
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+}
+
+
+@mixin tablet__wordMark{
+    font-family: "Newsreader";
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+}
+@mixin tablet__title{
+    font-family: "Newsreader";
+    font-size: 52px;
+    line-height: 66px;
+    font-weight: 300;
+}
+@mixin tablet__titleItalics{
+    font-family: "Newsreader";
+    font-size: 52px;
+    line-height: 66px;
+    font-weight: 300;
+    font-style: italic;
+}
+@mixin tablet__header{
+    font-family: "Outfit";
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+}
+@mixin tablet__bodyMedium{
+    font-family: "Outfit";
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+}
+@mixin tablet__bodyLight{
+    font-family: "Outfit";
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 300;
+}
+@mixin tablet__smallBody{
+    font-family: "Outfit";
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+}
+@mixin tablet__label{
+    font-family: "Outfit";
+    font-size: 14px;
+    line-height: 17.5px;
+    font-weight: 500;
+}
