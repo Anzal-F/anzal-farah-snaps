@@ -4,6 +4,8 @@ import axios from 'axios';
 import "./PhotoPage.scss";
 import Nav from '../../components/Nav/Nav';
 import Footer from '../../components/Footer/Footer';
+import likesIcon from "../../assets/Icons/Like_Outline.svg";
+import Comments from '../../components/Comments/Comments';
 
 const API_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
 const API_KEY = "f8599705-80b5-4d6f-8247-182da6f4e3ac";
@@ -70,7 +72,35 @@ function PhotoPage() {
   return (
     <main className='main'>
       <Nav />
-     
+      <div className="photo-cardbox">
+        <div className="photo-cards">
+          <img src={photo.photo} alt={photo.photoDescription} className="photo-img-large" />
+
+          <div className="tags-photos">
+            {photo.tags && photo.tags.map((tag, index) => (
+              <span key={index} className="tags--photo">{tag}</span>
+            ))}
+          </div>
+
+          <div className="name__date">
+            <div className="name__likes">
+              <div className="likes">
+                <img src={likesIcon} alt="like" /> {photo.likes} likes
+              </div>
+              <h3 className='name'>Photo by {photo.photographer}</h3>
+            </div>
+            <div className="timestamp">
+              {photo.timestamp ? new Date(photo.timestamp).toLocaleDateString() : "No date data"}
+            </div>
+          </div>
+        </div>
+        <Comments 
+          comments={comments}
+          newComment={newComment}
+          handleCommentChange={handleCommentChange}
+          handleSubmitComment={handleSubmitComment}
+        />
+      </div>
       <div className="footer__photo">
         <Footer />
         </div>
