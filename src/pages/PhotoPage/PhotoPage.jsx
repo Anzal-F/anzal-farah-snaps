@@ -42,7 +42,22 @@ function PhotoPage() {
     setNewComment({ name: name === "name" ? value : newComment.name, comment: name === "comment" ? value : newComment.comment });
   };
 
+  const handleSubmitComment = async (event) => {
+    event.preventDefault();
+  
+    if (!newComment.name || !newComment.comment) return;
 
+    try {
+        const response = await axios.post(
+            `${API_URL}/photos/${id}/comments?api_key=${API_KEY}`,
+            { name: newComment.name, comment: newComment.comment }
+        );
+        setComments([response.data, ...comments]);
+        setNewComment({ name: "", comment: "" }); 
+    } catch (error) {
+        console.error("Error submitting comment:", error);
+    }
+  };
 
   if (loading) {
     return <p>Loading photo...</p>;
