@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 {"version":3,"sources":["PhotosGallery.scss","PhotosGallery.css","../../styles/partials/_mixins.scss"],"names":[],"mappings":"AAEA;EACE,YAAA;EACA,WAAA;EACA,SAAA;EACA,gBAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;ACDF;ACPI;EFCJ;IAUM,aAAA;IACA,8BAAA;ECAJ;AACF;ACRI;EFJJ;IAeM,aAAA;IACA,kCAAA;ECCJ;AACF;;ACdI;EFgBJ;IAEI,aAAA;IACA,8BAAA;ECCF;AACF","file":"PhotosGallery.css"}
-=======
-{"version":3,"sources":["PhotosGallery.scss","PhotosGallery.css","../../styles/partials/_mixins.scss"],"names":[],"mappings":"AAEA;EACE,YAAA;EACA,WAAA;EACA,SAAA;EACA,gBAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;ACDF;ACPI;EFCJ;IAUM,aAAA;IACA,8BAAA;ECAJ;AACF;ACRI;EFJJ;IAeM,aAAA;IACA,kCAAA;ECCJ;AACF;;ACdI;EFiBJ;IAEI,aAAA;IACA,8BAAA;ECAF;AACF","file":"PhotosGallery.css"}
->>>>>>> develop

@@ -69,6 +69,13 @@
   fill: #EFFAF7;
 }
 
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .filter-button {
   background-color: #EFFAF7;
   display: flex;

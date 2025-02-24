@@ -13,11 +13,7 @@ export default function PhotoCards({ photo }) {
             <span key={index} className="tag">{tag}</span>
           ))}
         </div>
-<<<<<<< HEAD
-    </div>
-=======
       </div>
     </Link>
->>>>>>> develop
   );
 }
