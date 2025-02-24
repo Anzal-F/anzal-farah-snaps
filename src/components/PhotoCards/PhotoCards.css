@@ -28,6 +28,11 @@
   font-weight: 500;
   font-style: normal;
 }
+.photo-card-link {
+  text-decoration: none;
+  color: black;
+}
+
 .photo-card {
   background: #E4EFEC;
   border: 1px solid #ddd;

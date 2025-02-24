@@ -1,0 +1,20 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #EFFAF7;
+}
+
+.navbar-link {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3125rem;
+  text-decoration: none;
+  color: #1E6655;
+  font-family: "Outfit";
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 500;
+  align-items: center;
+}/*# sourceMappingURL=Nav.css.map */
