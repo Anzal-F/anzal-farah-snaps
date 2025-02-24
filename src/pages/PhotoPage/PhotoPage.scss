@@ -1,0 +1,133 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.photo-cardbox{
+    display: flex;
+    flex-direction: column;
+    background-color: #EFFAF7;
+    padding: 16px;
+
+    @include tablet{
+        padding: 24px;
+    }
+
+    @include desktop{
+        margin: 0 auto; 
+        padding: 0;
+        width: 100%; 
+        max-width: 900px; 
+    }
+}
+.photo-img-large{
+    width: 100%;
+    align-self: center;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    @include tablet{
+        height: 400px;
+        object-fit: cover;
+    }
+}
+.name{
+    @include mobile__bodyMedium;
+
+    @include tablet{
+        @include tablet__bodyMedium;
+    }
+}
+.photo-cards{
+    background-color: #E4EFEC;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border-radius: 20px;
+    margin-top: 10px;
+    height: 330px;
+    border: 1px solid  #B7CEC9;
+    align-self: center;
+
+    @include tablet{
+        height: 550px;
+        width: 95%;
+    }
+    @include desktop{
+        width: 100%;
+    }
+}
+.name__date{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    @include mobile__bodyMedium;
+    width: 100%;
+
+    @include tablet{
+        @include tablet__bodyMedium;
+    }
+}
+.timestamp{
+
+    @include tablet{
+        padding: 16px;
+        align-items: center;
+    }
+}
+
+.name__likes{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-self: flex-start;
+    @include mobile__bodyMedium;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60%;
+        padding: 16px;
+        @include tablet__bodyMedium;
+    }
+}
+.likes{
+    display: flex;
+    align-items: center;
+    gap: .3125rem;
+}
+.tags-photos{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    gap: .9375rem;
+    align-self: start;
+
+    @include tablet{
+        gap: 100px;
+    }
+    @include desktop{
+       display: flex;
+       padding-left: 20px;
+       justify-content: space-evenly;
+    }
+
+}
+.tags--photo{
+    background-color: #fff;
+    border: 1px solid #E4EFEC;
+    border-radius: 9px;
+    padding: 7px 7px;
+    cursor: pointer;
+    align-items: center;
+    font-style: normal;
+    @include mobile__smallBody;
+
+    @include tablet{
+        @include tablet__bodyMedium;
+    }
+}
+.footer__photo{
+    padding: 16px;
+}
