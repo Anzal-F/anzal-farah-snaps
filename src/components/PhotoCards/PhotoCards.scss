@@ -2,6 +2,11 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
+
+.photo-card-link{
+    text-decoration: none;
+    color: black;
+}
 .photo-card {
     background:  #E4EFEC;
     border: 1px solid #ddd;
