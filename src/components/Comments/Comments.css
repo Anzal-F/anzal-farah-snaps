@@ -1,1 +1,204 @@
-/*# sourceMappingURL=Comments.css.map */
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-Light.woff2") format("woff2"), url("../../assets/fonts/Newsreader-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-LightItalic.woff2") format("woff2"), url("../../assets/fonts/Newsreader-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-Regular.woff2") format("woff2"), url("../../assets/fonts/Newsreader-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit-Light.woff2") format("woff2"), url("../../assets/fonts/Outfit-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit-Medium.woff2") format("woff2"), url("../../assets/fonts/Outfit-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+.comments-section {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1280px) {
+  .comments-section {
+    width: 100%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .form {
+    padding: 16px;
+  }
+}
+@media (min-width: 1280px) {
+  .form {
+    padding: 0;
+  }
+}
+
+.comment-input {
+  width: 100%;
+  border-radius: 10px;
+  padding-bottom: 80px;
+  padding-left: 16px;
+  padding-top: 10px;
+  border: 1px solid #B7CEC9;
+}
+
+.name-input {
+  width: 100%;
+  border-radius: 10px;
+  height: 35px;
+  text-align: left;
+  border: 1px solid #B7CEC9;
+}
+
+.name-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  font-family: "Outfit";
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .name-label {
+    font-family: "Outfit";
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+}
+
+.submit-btn {
+  display: flex;
+  align-self: flex-end;
+  padding: 10px 15px;
+  border-radius: 7px;
+  color: #FFFFFF;
+  background-color: #1E6655;
+  border: #1E6655;
+  font-family: "Outfit";
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .submit-btn {
+    font-family: "Outfit";
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+}
+
+.comment {
+  border-bottom: 1px solid #B7CEC9;
+  border-top: 1px solid #B7CEC9;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+@media (min-width: 768px) {
+  .comment {
+    padding: 16px;
+  }
+}
+@media (min-width: 1280px) {
+  .comment {
+    padding: 0;
+  }
+}
+
+.comment-upper {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-family: "Outfit";
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+  color: #1E6655;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .comment-upper {
+    font-family: "Outfit";
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+  }
+}
+
+.former-comment {
+  padding: 5px;
+  margin-bottom: 5px;
+  color: #000;
+  font-family: "Outfit";
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .former-comment {
+    font-family: "Outfit";
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+  }
+}
+
+.comments__title {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-self: self-start;
+  padding-bottom: 30px;
+}
+
+.input--invalid {
+  border: 2px solid red;
+  animation: shakeItUp 0.25s;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+@keyframes shakeItUp {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=Comments.css.map */
