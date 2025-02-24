@@ -1,6 +1,9 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Content from "../../components/Content/Content";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 const API_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
 const API_KEY = "f8599705-80b5-4d6f-8247-182da6f4e3ac";
@@ -43,7 +46,26 @@ function HomePage() {
 
   return (
     <>
-    
+        <main className="main">
+        <Navbar
+            tags={tags}
+            selectedTag={selectedTag}
+            handleFilterSelect={handleFilterSelect}
+            isOpen={isOpen}   
+            toggleNavbar={toggleNavbar} 
+        />
+
+        <Content
+            tags={tags}
+            selectedTag={selectedTag}
+            onFilterSelect={handleFilterSelect}
+            isOpen={isOpen}  
+            photos={filteredPhotos}
+        />
+        </main>
+        <div className="footer">
+        <Footer />
+        </div>
     </>
   );
 }
