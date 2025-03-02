@@ -7,8 +7,7 @@ import Footer from '../../components/Footer/Footer';
 import likesIcon from "../../assets/Icons/Like_Outline.svg";
 import Comments from '../../components/Comments/Comments';
 
-const API_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
-const API_KEY = "f8599705-80b5-4d6f-8247-182da6f4e3ac";
+const API_URL = "http://localhost:8080";
 
 function PhotoPage() {
   const { id } = useParams();
@@ -20,10 +19,10 @@ function PhotoPage() {
   useEffect(() => {
     const fetchPhotoAndComments = async () => {
       try {
-        const photoResponse = await axios.get(`${API_URL}/photos/${id}?api_key=${API_KEY}`);
+        const photoResponse = await axios.get(`${API_URL}/photos/${id}`);
         setPhoto(photoResponse.data);
 
-        const commentResponse = await axios.get(`${API_URL}/photos/${id}/comments?api_key=${API_KEY}`);
+        const commentResponse = await axios.get(`${API_URL}/photos/${id}/comments`);
         
         
         const sortedComments = commentResponse.data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
@@ -51,7 +50,7 @@ function PhotoPage() {
 
     try {
         const response = await axios.post(
-            `${API_URL}/photos/${id}/comments?api_key=${API_KEY}`,
+            `${API_URL}/photos/${id}/comments`,
             { name: newComment.name, comment: newComment.comment }
         );
         setComments([response.data, ...comments]);
@@ -74,7 +73,8 @@ function PhotoPage() {
       <Nav />
       <div className="photo-cardbox">
         <div className="photo-cards">
-          <img src={photo.photo} alt={photo.photoDescription} className="photo-img-large" />
+          <img src={`${API_URL}/images/${photo.photo}`} alt={photo.photoDescription} className="photo-img-large" />
+
 
           <div className="tags-photos">
             {photo.tags && photo.tags.map((tag, index) => (

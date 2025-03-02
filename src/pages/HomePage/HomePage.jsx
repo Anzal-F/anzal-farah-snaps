@@ -1,12 +1,10 @@
-
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Content from "../../components/Content/Content";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
-const API_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
-const API_KEY = "f8599705-80b5-4d6f-8247-182da6f4e3ac";
+const API_URL = "http://localhost:8080";
 
 function HomePage() {
   const [tags, setTags] = useState([]);
@@ -15,22 +13,21 @@ function HomePage() {
   const [filteredPhotos, setFilteredPhotos] = useState([]);
   const [isOpen, setIsOpen] = useState(false);  
 
- useEffect(() => {
-    
+  useEffect(() => {
     const fetchData = async () => {
         try {
-            const tagsResponse = await axios.get(`${API_URL}/tags?api_key=${API_KEY}`);
-            const photosResponse = await axios.get(`${API_URL}/photos?api_key=${API_KEY}`);
+            const tagsResponse = await axios.get(`${API_URL}/tags`);
+            const photosResponse = await axios.get(`${API_URL}/photos`);
     
             setTags(tagsResponse.data);
             setPhotos(photosResponse.data);
-            setFilteredPhotos(photosResponse.data)
+            setFilteredPhotos(photosResponse.data);
         } catch (error) {
             console.error("Error fetching data:", error);
         }
     };
     fetchData();
- }, []);
+  }, []);
 
   const handleFilterSelect = (tag) => {
     if (selectedTag === tag) {
@@ -46,26 +43,30 @@ function HomePage() {
 
   return (
     <>
-        <main className="main">
+      <main className="main">
         <Navbar
-            tags={tags}
-            selectedTag={selectedTag}
-            handleFilterSelect={handleFilterSelect}
-            isOpen={isOpen}   
-            toggleNavbar={toggleNavbar} 
+          tags={tags}
+          selectedTag={selectedTag}
+          handleFilterSelect={handleFilterSelect}
+          isOpen={isOpen}   
+          toggleNavbar={toggleNavbar} 
         />
 
         <Content
-            tags={tags}
-            selectedTag={selectedTag}
-            onFilterSelect={handleFilterSelect}
-            isOpen={isOpen}  
-            photos={filteredPhotos}
+          tags={tags}
+          selectedTag={selectedTag}
+          onFilterSelect={handleFilterSelect}
+          isOpen={isOpen}  
+          photos={filteredPhotos.map((photo) => ({
+            ...photo, 
+            photo: `${API_URL}/images/${photo.photo}`, 
+          }))}
         />
-        </main>
-        <div className="footer">
+      </main>
+
+      <div className="footer">
         <Footer />
-        </div>
+      </div>
     </>
   );
 }
