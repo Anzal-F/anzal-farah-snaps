@@ -1,13 +1,14 @@
 
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
 
 .tags-container {
-  background-color: #E4EFEC;
+  background-color: $background-color;
   opacity: 1;
   max-height: 100%;
   overflow: hidden;
-  margin-top: 30px;
+  margin-top: 1.875rem;
 
   @include desktop {
     display: flex;
@@ -31,7 +32,7 @@
 
 .filter-head {
   @include mobile__header;
-  padding: 16px;
+  padding: 1rem;
   display: none;
 
   @include desktop {
@@ -51,17 +52,17 @@
 }
 
 .tag-btn {
-  margin: 5px 5px;
-  color: #1E6655;
-  padding: 8px 12px;
-  border-radius: 7px;
-  border: 1px solid #1E6655;
+  margin: .3125rem .3125rem;
+  color: $primary-color;
+  padding: .5rem .75rem;
+  border-radius: .4375rem;
+  border: .0625rem solid $primary-color;
   cursor: pointer;
   transition: background-color 0.3s ease;
   @include mobile__bodyMedium;
 
   @include desktop {
-    top: 20px;
+    top: 1.25rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -69,17 +70,17 @@
 
   
  &.active {
-    background-color: #1E6655;
-    color: white;
+    background-color: $primary-color;
+    color: $button-color;
   }
   
   &:hover{
-    background-color: #B7CEC9;
+    background-color: $secondary-color;
   }
 }
 
 .tags {
-  margin: 20px;
+  margin: 1.25rem;
 
   @include desktop {
     display: flex;

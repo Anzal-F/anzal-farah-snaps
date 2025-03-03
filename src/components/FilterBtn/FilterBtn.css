@@ -1,8 +1,0 @@
-.filter-container {
-  position: relative;
-}
-@media (min-width: 1280px) {
-  .filter-container {
-    flex-direction: column;
-  }
-}/*# sourceMappingURL=FilterBtn.css.map */

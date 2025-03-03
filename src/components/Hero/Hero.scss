@@ -1,20 +1,21 @@
-@use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
 
 .hero__title{
     @include mobile__bodyLight;
-    padding: 16px;
-    margin-top: -10px;
+    padding: 1rem;
+    margin-top: -0.625rem;
 }
 
 .hero__text{
     @include mobile__title;
-    padding: 0 16px;
-    margin-bottom: 30px;
+    padding: 0 1rem;
+    margin-bottom: 1.875rem;
     width: 100%;
 
     @include desktop{
-        max-width: 500px;
+        max-width: 31.25rem;
     }
 }
 

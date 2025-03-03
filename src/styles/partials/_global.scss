@@ -1,0 +1,167 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.footer-main{
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 2.1875rem;
+
+    @include tablet{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    @include desktop{
+        width: 80%;
+    }
+}
+.wordmark-title{
+    text-decoration: none;
+    color: $text-color;
+    @include mobile__wordMark;
+
+    @include tablet{
+        @include tablet__wordMark;
+    }
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    @include tablet{
+        display: flex;
+        flex-direction: row;
+        width: 18.75rem;
+    }
+}
+
+.link{
+    padding-bottom: .625rem;
+    @include mobile__bodyMedium;
+
+    @include tablet{
+        @include tablet__bodyMedium
+    }
+}
+
+.right{
+    display: flex;
+    gap: 1.25rem;
+    margin-top: .625rem;
+
+    @include tablet{
+        margin-top: 6.25rem;
+    }
+    @include desktop{
+        margin-top: 0;
+        align-self: self-start;
+        
+    }
+}
+
+.copyright{
+    display: flex;
+    gap: .9375rem;
+    margin-top: 1.875rem;
+    @include mobile__bodyMedium;
+    color: $secondary-color;
+}
+
+
+.navbar {
+  background-color: $primary-background;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.25rem;
+  transition: height 0.3s ease;
+  overflow: hidden;
+
+  @include desktop {
+    flex-direction: row;
+  }
+
+  &-title {
+    text-decoration: none;
+    color: $text-color;
+    @include mobile__wordMark;
+  
+    @include tablet{
+      @include tablet__wordMark;
+    }
+  }
+
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.filter-button.active .filter-icon path {
+  fill: $primary-background; 
+}
+
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.filter-button {
+  background-color: $primary-background;
+  display: flex;
+  color: $primary-color;
+  justify-content: space-around;
+  align-items: center;
+  padding: .1875rem .625rem;
+  border: .125rem solid $primary-color;
+  cursor: pointer;
+  @include mobile__header;
+  width: 6.25rem;
+  border-radius: 3.125rem;
+  transition: background-color 0.3s ease;
+
+  @include desktop {
+    width: 7.5rem;
+  }
+
+  &.active {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+
+
+
+.tags-container {
+  @include desktop {
+    display: none;
+    width: 30%;
+    position: absolute;
+    top: 0rem;
+  }
+}
+
+.navbar.expanded .tags-container {
+  
+  @include desktop{
+    display: none;
+  }
+}

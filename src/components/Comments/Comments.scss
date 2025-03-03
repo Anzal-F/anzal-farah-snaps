@@ -1,8 +1,9 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
 
 .comments-section{
-    margin: 50px 0;
+    margin: 3.125rem 0;
     display: flex;
     flex-direction: column;
 
@@ -14,11 +15,11 @@
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    padding: 16px;
-    margin-bottom: 20px;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
 
     @include tablet{
-        padding: 16px;
+        padding: 1rem;
     }
 
     @include desktop{
@@ -28,19 +29,19 @@
 }
 .comment-input{
    width: 100%;
-   border-radius: 10px;
-   padding-bottom: 80px;
-   padding-left: 16px;
-   padding-top: 10px;
-   border: 1px solid #B7CEC9;
+   border-radius: .625rem;
+   padding-bottom: 5rem;
+   padding-left: 1rem;
+   padding-top: .625rem;
+   border: .0625rem solid $secondary-color;
 }
 .name-input{
     width: 100%;
-    border-radius: 10px;
-    height: 35px;
+    border-radius: .625rem;
+    height: 2.1875rem;
     text-align: left;
-    border: 1px solid #B7CEC9;
-    padding: 16px;
+    border: .0625rem solid $secondary-color;
+    padding: 1rem;
 }
 .name-label{
     display: flex;
@@ -55,12 +56,16 @@
 .submit-btn{
     display: flex;
     align-self: flex-end;
-    padding: 10px 15px;
-    border-radius: 7px;
-    color:  #FFFFFF;
-    background-color:  #1E6655;
-    border: #1E6655;
+    padding: .625rem .9375rem;
+    border-radius: .4375rem;
+    color: $button-color;
+    background-color: $primary-color;
+    border: $primary-color;
     @include mobile__header;
+
+    &:hover {
+        background-color: $hover-color;
+    }
 
     @include tablet{
         @include tablet__header;
@@ -68,15 +73,15 @@
 }
 
 .comment{
-    border-bottom: 1px solid #B7CEC9;
-    border-top: 1px solid #B7CEC9;
+    border-bottom: .0625rem solid $secondary-color;
+    border-top: .0625rem solid $secondary-color;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-self: center;
 
     @include tablet{
-        padding: 16px;
+        padding: 1rem;
     }
     @include desktop{
         padding: 0;
@@ -85,19 +90,19 @@
 .comment-upper{
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: .3125rem;
     @include mobile__bodyMedium;
-    color: #1E6655;
-    margin-bottom: 10px;
+    color: $primary-color;
+    margin-bottom: .625rem;
 
     @include tablet{
         @include tablet__bodyMedium;
     }
 }
 .former-comment{
-    padding: 5px;
-    margin-bottom: 5px;
-    color: #000;
+    padding: .3125rem;
+    margin-bottom: .3125rem;
+    color: $text-color;
     @include mobile__bodyMedium;
 
     @include tablet{
@@ -109,27 +114,27 @@
     width: 90%;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     align-self: self-start;
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
 }
 .input--invalid {
-    border: 2px solid red;
+    border: .125rem solid $error-color;
     animation: shakeItUp 0.25s;
   }
   
   .error-message {
-    color: red;
-    font-size: 0.875rem;
-    margin-top: 4px;
+    color: $error-color;
+    font-size: 14px;
+    margin-top: .25rem;
   }
   
   @keyframes shakeItUp {
     0% { 
-        transform: translateX(-10px); 
+        transform: translateX(-0.625rem); 
     }
     50% {
-         transform: translateX(10px); 
+         transform: translateX(.625rem); 
         }
     100% {
          transform: translateX(0); 
